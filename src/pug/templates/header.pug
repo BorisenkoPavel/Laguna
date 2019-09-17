@@ -1,0 +1,69 @@
+header.header
+	.container.d-flex.justify-content-between.align-items-center
+		.hamburger.hamburger--emphatic.d-flex.align-items-center
+			.hamburger-box
+				.hamburger-inner
+			.menu-toggle Меню
+		.btn-container
+			.btn.btn-primary.rounded-pill
+				+icon('phone', "phone-svg")
+				| Звоните: 55-33-55
+	.menu
+		.container
+			.logo-wrapper.text-center
+				+icon('logo', 'logo mb-5')
+			.row.pb-4
+				.menu-item-list.col-6.col-lg-4.mb-5
+					.subtitle.b.mb-3.text-uppercase О лагуне
+					ul.no-decoration
+						li: a.link(href="#") О компании
+						li: a.link(href="#") Новости
+						li: a.link(href="#") Акци
+						li: a.link(href="#") Контакты
+						li: a.link(href="#") Отзывы
+				.menu-item-list.col-6.col-lg-4.mb-5
+					.subtitle.b.mb-3.text-uppercase Залы
+					ul.no-decoration
+						li: a.link(href="#") Русская баня Хуторок
+						li: a.link(href="#") Сафари-SPA
+						li: a.link(href="#") Мини-Аквапарк Остров сокровищ
+						li: a.link(href="#") Остров сокровищ
+						li: a.link(href="#") Классик ONE
+						li: a.link(href="#") Классик TWO
+						li: a.link(href="#") Уют без бассейна
+						li: a.link(href="#") Ривьера
+				.menu-item-list.col-6.col-lg-4.mb-5
+					.subtitle.b.mb-3.text-uppercase гостиница
+					ul.no-decoration
+						li: a.link(href="#") SPA-номер для двоих
+						li: a.link(href="#") Стандарт
+						li: a.link(href="#") Эконом-класс
+				.menu-item-list.col-6.col-lg-4.mb-5
+					.subtitle.b.mb-3.text-uppercase сервисы
+					ul.no-decoration
+						li Парковка
+						li Бильярд
+						li Бар
+						li Wi-Fi
+						li Комната отдыха
+				.menu-item-list.col-sm-8.col-md-6.col-lg-4
+					.subtitle.b.mb-3.text-uppercase контакты
+					ul.no-decoration.contacts-list
+						li.b: a.link(href="tel: +73852553355")
+							+icon('contacts-phone', 'contacts-icon')
+							| Единый номер: 8 (3852) 55-33-55
+						li: a.link(href="tel: +73852583358")
+							| Банный комплекс: 8 (3852) 58-33-58
+						li: a.link(href="tel: +73852466119")
+							| Гостиница: 8 (3852) 46-61-19
+						li 
+							+icon('contacts-addres', 'contacts-icon')
+							| Барнаул, ул.Малахова 173а
+						li: a.link(href="mailto: laguna-barnaul@mail.ru")
+							+icon('contacts-mail', 'contacts-icon')
+							| laguna-barnaul@mail.ru
+				.menu-item-list.col-sm-1.col-md-6.col-lg-4.d-flex.flex-sm-column
+					+icon('insta', 'social-icon')
+					+icon('vk', 'social-icon')
+					+icon('youtube', 'social-icon')
+

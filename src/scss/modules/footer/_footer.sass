@@ -1,0 +1,29 @@
+footer
+	flex: 0 0 auto
+
+.contacts-icon
+	width: 13px
+	height: 13px
+.social-icon
+	width: 28px
+	height: 28px
+	transition: .2s ease
+	cursor: pointer
+	&:hover
+		fill: $primary
+		animation: zoom .5s ease
+@keyframes zoom
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.1)
+	100%
+		transform: scale(1)
+
+
+.link
+	svg
+		transition: .1s ease
+	&:hover
+		svg
+			fill: $accent

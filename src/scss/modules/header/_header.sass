@@ -1,0 +1,32 @@
+.hamburger
+	margin-left: -30px
+
+header
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	& > .container
+		position: relative
+		z-index: 555
+	.btn-container
+		opacity: 0
+		pointer-events: none
+		transform: translate(-20px)
+
+header.is-active
+	.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
+		background-color: $text
+	.menu-toggle
+		color: $text
+	.btn-container
+		opacity: 1
+		pointer-events: all
+		transition: .5s ease
+		transform: translate(0)
+		transition-delay: .3s
+.menu-toggle
+	transition: .3s ease
+	color: #fff
+	font-weight: 800
+	margin-left: 1rem

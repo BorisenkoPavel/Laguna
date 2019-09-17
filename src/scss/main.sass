@@ -1,0 +1,442 @@
+@import start
+.menu
+	padding: 4.5rem 0
+	position: absolute
+	top: 0
+	z-index: 500
+	left: 0
+	right: 0
+	transition: .3s
+	pointer-events: none
+	.logo
+		opacity: 0
+.menu.is-active
+	background-color: rgba(255, 243, 227, .95)
+	height: 100vh
+	pointer-events: all
+	overflow-y: scroll
+	.menu-item-list
+		transform: translateY(0)
+		opacity: 1
+		transition: .6s ease
+		&:nth-of-type(1)
+			transition-delay: .3s
+		&:nth-of-type(2)
+			transition-delay: .4s
+		&:nth-of-type(3)
+			transition-delay: .5s
+		&:nth-of-type(4)
+			transition-delay: .6s
+		&:nth-of-type(5)
+			transition-delay: .7s
+		&:nth-of-type(6)
+			transition-delay: .8s
+	.logo
+		opacity: 1
+.menu-item-list
+	transform: translateY(50px)
+	opacity: 0
+.section-banner
+	background: url(../img/content/banner.jpg) no-repeat center/cover
+	padding-bottom: 300px
+
+.logo
+	width: 220px
+	height: 203px
+	fill: #fff
+	transition: .3s ease
+.logo.change-color
+	fill: $secondary
+
+.swiper-slide h1
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+
+#myCanvas
+	height: 100%
+	width: 100%
+	max-width: 100%
+	position: absolute
+	bottom: 0
+	left: 0
+
+.section-change
+	background: linear-gradient(to top, #fff 65%, transparent 100%)
+	margin-top: -240px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		width: 100%
+		height: 230px
+		background: linear-gradient(to top, transparent 50%, #fff 100% )
+		bottom: -230px
+
+.change-list.grid, .news-list.grid
+	@include grid(2, 20px)
+.change-item
+	border-radius: 10px
+	display: flex
+	align-items: flex-end
+	padding: 1.25rem 1.875rem
+	position: relative
+	height: 350px
+	overflow: hidden
+	cursor: pointer
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: $secondary
+		transform: translatex(-100%)
+		transition: .3s ease
+	.change-item--inner
+		border-radius: 10px
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 1.25rem 1.875rem 1.875rem
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		opacity: 0
+		transform: translatey(20px)
+	&:hover
+		&:before
+			transform: translate(0)
+		.change-item--inner
+			transform: translate(0)
+			opacity: 1
+			transition: .4s ease
+			transition-delay: .3s
+.section-advantages
+	overflow: hidden
+	
+.advantage-list.grid
+	@include grid(3)
+	margin-bottom: 6.875rem
+.advantage-item
+	&__icon-wrapper
+		width: 144px
+		height: 144px
+		border-radius: 50%
+		background-color: $accent
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		flex: 0 0 auto
+	&__num
+		position: absolute
+		left: 0
+		top: -12%
+		color: #000
+		opacity: .2
+		font-size: 3.125rem
+		font-weight: 800
+	&__text
+		position: relative
+		left: -22px
+		line-height: 1.3
+.icon-adv
+	width: 53px
+	height: 48px
+.icon-adv2
+	width: 45px
+	height: 48px
+.icon-adv3
+	width: 61px
+	height: 48px
+.img-container
+	perspective: 1000px
+	backface-visibility: hidden
+	transform: translateZ(0)
+	&:before
+		content: ''
+		position: absolute
+		top: -3%
+		bottom: 3%
+		left: -4%
+		right: 4%
+		background-color: #00c8d4
+		border-radius: 50%
+		z-index: -1
+.form-pic
+	transform: translatex(50px)
+	position: relative
+.form-pic2
+	left: -23%
+	position: absolute
+	bottom: -1%
+	right: 0%
+	animation: anime2 5s ease infinite 
+	width: 493px
+	height: 473px
+@keyframes anime2
+	0%
+		transform: skew(0) rotatex(0deg) scale(1)
+		filter: drop-shadow(0 0 0 rgba(0,0,0,0))
+
+	33%
+		transform: skew(2deg) rotatex(-5deg) scale(1.05)
+		filter: drop-shadow(0 0 15px rgba(0,0,0, .4))
+
+	66%
+		transform: skew(0) rotatex(0deg) scale(1) 
+	100%
+		transform: skew(0) rotatex(0deg) scale(1)
+.form-pic4
+	position: absolute
+	top: 0
+	right: 15%
+.form-pic3
+	position: absolute
+	top: 27%
+	right: 0%
+.form-pic5 
+	position: absolute
+	top: 63%
+	right: 24%
+.news-item
+	@extend .change-item
+	padding: 0
+	&::before
+		display: none
+	&:hover
+		.news-item__content::before
+			transform: scaley(1)
+		.news-item__photo
+			transform: scale(1.1)
+	&__photo
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		transition: .8s ease
+		backface-visibility: hidden
+	&__content
+		position: relative
+		z-index: 50
+		padding: 1.25rem 1.875rem
+		width: 100%
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			top: 0
+			transition: .5s ease
+			transform-origin: bottom
+			transform: scaley(3)
+			background: rgba(0,0,0, .5)
+			z-index: -1
+
+section.section-halls
+	&:before, &::after
+		content: ''
+		background-image: url(../img/general/bg-cloud.png) 
+		background-repeat: no-repeat
+		background-size: cover
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		position: absolute
+	&::before
+		transform: rotate(180deg)
+		background-position: top center
+	&::after
+		background-position: center 500px
+		bottom: -500px
+.grid.hall-list
+	@include grid(2, 20px)
+	.grid__cell.grid__cell--big-item
+		@include grid__cell--span(3, 4)
+		.hall-item
+			height: 360px
+		.hall-item__title
+			font-size: 2.1875rem
+.hall-item
+	height: 180px
+	display: flex!important	
+	flex-direction: column
+	justify-content: flex-end
+	border-radius: 10px
+	padding: 0.9375rem
+	position: relative
+	overflow: hidden
+	cursor: pointer
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		transition: .5s ease
+		background: rgba(0,0,0, .5)
+		z-index: 1
+	&__content
+		position: relative
+		z-index: 2
+		transition: .3s ease
+	&__title
+		font-size: 1.25rem
+		font-weight: 800
+	&:hover
+		&::before
+			opacity: 0
+		.hall-item__content
+			transform: translatex(-150%)
+		.news-item__photo
+			transform: scale(1.1)
+.swiper-container.halls-slider
+	margin-bottom: 100px
+
+
+.swiper-container.swiper-photo
+	width: 120%
+	margin-left: -10%
+	.swiper-slide
+		padding-top: 5%
+		padding-left: 5%
+		&::after, &::before
+			content: ''
+			position: absolute
+			top: 2%
+			bottom: 2%
+			left:  2%
+			right: 2%
+			background-color: $primary
+			border-radius: 50%
+			z-index: -1
+	.photo-item
+		border-radius: 50%
+		overflow: hidden
+		&::before
+			content: ''
+			position: absolute
+			top: -1%
+			bottom: -1%
+			left:  -1%
+			right: -1%
+			z-index: 10
+			background-image: url(../img/general/rounded-cloud.png)
+			background-size: cover
+			animation: cloud-round 90s ease infinite
+@keyframes cloud-round
+	0%
+		transform: rotate(0)
+		opacity: 1
+	50%
+		opacity: .7
+	100%
+		transform: rotate(-360deg)
+		opacity: 1
+		
+
+.section-reviews
+	background: url(../img/general/bg-footer.png) no-repeat bottom center/cover
+	padding-bottom: 10rem
+
+.review-item__icon-wrapper
+	width: 160px
+	height: 160px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: -10%
+		bottom: 10%
+		left: -10%
+		right: 10%
+		background-color: $secondary
+		border-radius: 50%
+		z-index: -1
+	picture
+		width: 100%
+		height: 100%
+		display: block
+		flex: 0 0 auto
+		overflow: hidden
+		border-radius: 50%
+		img
+			width: 100%
+
+
+.contacts-list
+	li
+		padding-left: 25px
+		position: relative
+
+.contacts-icon
+	position: absolute
+	left: 0
+	top: 0
+	bottom: 0
+	margin: auto
+.social-icon
+	margin-bottom: 1rem
+
+.page-phone
+	width: 35px
+	height: 35px
+	fill: $accent
+	align-self: center
+
+.tab
+	background-color: $secondary
+	padding: 1.25rem
+	border-radius: 10px
+	display: flex
+.tab-title.ui-tabs-active
+	background-color: $secondary
+	a
+		color: $white!important
+		&:hover
+			svg
+				fill: $white!important
+.tab-title
+	border-radius: 10px 10px 0 0
+	padding: 0.3125rem 1.25rem
+	margin: 0!important
+	transform: translatey(10px)
+	padding-bottom: 15px
+	a
+		text-transform: none!important
+		width: 100%
+		justify-content: center
+		&:hover
+			svg
+				fill: inherit!important
+.price
+	.b
+		font-size: 1.875rem
+		line-height: 1.1
+	margin-right: 0.9375rem
+.services-list
+	display: flex
+	justify-content: space-between
+	width: 100%
+.icon-block
+	display: flex
+	align-items: center
+	&__icon
+		margin-right: 15px
+
+.section-catalog
+	.advantage-item__icon-wrapper
+		width: 120px
+		height: 120px
+	.advantage-item__desc
+		max-width: 500px
+@import media

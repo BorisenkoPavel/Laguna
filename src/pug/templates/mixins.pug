@@ -1,0 +1,14 @@
+mixin icon(name,mod)
+  if(mod)
+    svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+      use(xlink:href="img/svg/symbol/sprite.svg#" + name)
+  else
+    svg(class="svg-sprite-icon icon-" + name)
+      use(xlink:href="img/svg/symbol/sprite.svg#" + name)
+
+mixin pic(cls, path, name, type, alt)
+  picture(class= cls)
+    source(type='image/webp' srcset='img/' + path + '/' + name + '.webp')
+    source(type='image/jpg' srcset='img/' + path + '/' + name + '.jpg')
+    img(src='img/' + path + '/' + name + '.jpg' alt=alt)
+

@@ -1,0 +1,277 @@
+extends templates/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+block content
+	section.section-banner.text-center
+		canvas(id="myCanvas" height="200" width="800")
+		.container.text-white.position-relative
+			+icon('logo', 'logo mb-4')
+			.swiper-container.banner-slider.mb-5
+				.swiper-wrapper
+					.swiper-slide
+						h1 Самые уютные бани в городе
+						.subtitle.text-dark: big Барнаул, ул.Малахова, д.173а
+					.swiper-slide
+						h1 Самые уютные бани в городе
+						.subtitle.text-dark: big Барнаул, ул.Малахова, д.173а
+			.swiper-button-prev.banner-button-prev
+			.swiper-button-next.banner-button-next
+
+			.btn.btn-primary.rounded-pill
+				+icon('phone', "phone-svg")
+				| Звоните: 55-33-55
+	.parallax-container.position-relative
+		#parallax-bg-3.parallax-bg
+			#bg-3-1
+			#bg-3-2
+			#bg-3-3
+			#bg-3-4
+		#parallax-bg-2.parallax-bg
+			#bg-2-1
+			#bg-2-2
+			#bg-2-3
+			#bg-2-4
+			#bg-2-5
+			#bg-2-6
+		#parallax-bg-1.parallax-bg
+			#bg-1-1
+			#bg-1-2
+			#bg-1-3
+			#bg-1-4
+			#bg-1-5
+		section.section-change
+			.container.text-white
+				.change-list.grid
+					.grid__cell
+						.change-item(style="background: url(img/content/change2.jpg) no-repeat center/cover")
+							.change-item--inner
+								.change-item--body
+									h3.change-item__title Гостиница
+									.change-item__text В Русской бане «Хуторок» — можно приятно провести время и оздоровиться. Ароматные веники позволят вдоволь попариться. Обливная кадка с ледяной водой закалит и охладит вас после банных процедур
+								a.subtitle.arrow-link(href="") 
+									| Подробнее
+									+icon('arrow')
+							h3.change-item__title Гостиница
+					.grid__cell
+						.change-item(style="background: url(img/content/change1.jpg) no-repeat center/cover")
+							.change-item--inner
+								.change-item--body
+									h3.change-item__title Баня и сауна
+									.change-item__text В Русской бане «Хуторок» — можно приятно провести время и оздоровиться. Ароматные веники позволят вдоволь попариться. Обливная кадка с ледяной водой закалит и охладит вас после банных процедур
+								a.subtitle.arrow-link(href="") 
+									| Подробнее
+									+icon('arrow')
+							h3.change-item__title Баня и сауна
+		section.section-advantages
+			.container 
+				h1.text-center.mb-5 Почему выбирают нас?
+				.advantage-list.grid
+					.advantage-item.d-flex.align-items-center
+						.advantage-item__icon-wrapper
+							+icon('adv', 'advantage-icon')
+							.advantage-item__num 01.
+						.advantage-item__text.subtitle.b Теплые, чистые бассейны
+					.advantage-item.d-flex.align-items-center
+						.advantage-item__icon-wrapper
+							+icon('adv2', 'advantage-icon')
+							.advantage-item__num 02.
+						.advantage-item__text.subtitle.b Водные <br>аттракционы
+					.advantage-item.d-flex.align-items-center
+						.advantage-item__icon-wrapper
+							+icon('adv3', 'advantage-icon')
+							.advantage-item__num 03.
+						.advantage-item__text.subtitle.b Большой выбор <br>залов и парных
+			.form-container
+				.container
+					.row.no-gutters.position-relative
+						.col-md-6.d-flex.justify-content-end.form-pic-wrapper
+							.img-container
+								+pic('form-pic', 'content', 'table-img1')
+								+pic('form-pic2', 'content', 'table-img2')
+								+pic('form-pic3', 'content', 'table-img3')
+								+pic('form-pic4', 'content', 'table-img4')
+								+pic('form-pic5', 'content', 'table-img5')
+						.col-md-6.pt-5
+							h3.mt-4
+								span.text-primary Забронируйте сейчас<br>
+								| в один клик!
+							.subtitle.mb-4: big Мы обязательно свяжемся <br>с вами в ближайшее время
+							form.form-block
+								input(type="text" placeholder="Ваше имя").w-100.rounded-pill.border-0.mb-4
+								input(type="text" placeholder="Номер телефона").w-100.rounded-pill.border-0.mb-4
+								p.pb-3 Нажимая на кнопку, вы соглашаетесь на <a href="/" class="dotted-link">обработку персональных данных</a>
+								button.btn.border-0.btn-danger.rounded-pill Отправить
+		section.section-news
+			.container
+				h1.text-center Акции и новости
+					a.subtitle.arrow-link.text-primary.ml-3(href="") 
+						| читать все
+						+icon('arrow')
+				.grid.news-list
+					.grid__cell
+						a.news-item.no-link(href="#")
+							.news-item__photo(style="background: url(img/content/news2.jpg) no-repeat center/cover")
+							.news-item__content
+								.news-item__date.text-primary 29 июля
+								.news-item__title.subtitle.b.text-white АКЦИЯ БУДНИЧНОГО ДНЯ — ТРЕТИЙ ЧАС В ПОДАРОК!
+					.grid__cell
+						a.news-item.no-link(href="#")
+							.news-item__photo(style="background: url(img/content/news2.jpg) no-repeat center/cover")
+							.news-item__content
+								.news-item__date.text-primary 22 июля
+								.news-item__title.subtitle.b.text-white МАЛЬЧИШНИК ИЛИ ДЕВИЧНИК? ПОЛУЧИТЕ ПОДАРОК!	
+		section.section-halls
+			.container.position-relative
+				h1.text-center Залы
+				.swiper-container.halls-slider.text-white
+					.swiper-wrapper
+						.swiper-slide
+							.grid.hall-list
+								.grid__cell.grid__cell--big-item
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall1.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Русская баня Хуторок
+											.hall-item__text Здесь можно приятно провести время и оздоровиться. Ароматные веники и обливная кадка с ледяной водой закалит и охладит вас после банных процедур
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall2.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Номер стандарт
+											.hall-item__text Зал для небольших компаний
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall3.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Уют без басейна
+											.hall-item__text Отличное сочетание цены и качества
+						.swiper-slide
+							.grid.hall-list.hall-list--reverse
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall4.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Остров сокровищ
+											.hall-item__text Эмоции и восторг для детей и взрослых
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall5.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Ривьера
+											.hall-item__text Новый зал с живописным 	интерьером
+								.grid__cell.grid__cell--big-item
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall6.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Уют без басейна
+											.hall-item__text Отличное сочетание цены и качества
+						.swiper-slide
+							.grid.hall-list
+								.grid__cell.grid__cell--big-item
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall1.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Русская баня Хуторок
+											.hall-item__text Здесь можно приятно провести время и оздоровиться. Ароматные веники и обливная кадка с ледяной водой закалит и охладит вас после банных процедур
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall2.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Номер стандарт
+											.hall-item__text Зал для небольших компаний
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall3.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Уют без басейна
+											.hall-item__text Отличное сочетание цены и качества
+						.swiper-slide
+							.grid.hall-list.hall-list--reverse
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall4.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Остров сокровищ
+											.hall-item__text Эмоции и восторг для детей и взрослых
+								.grid__cell
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall5.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Ривьера
+											.hall-item__text Новый зал с живописным 	интерьером
+								.grid__cell.grid__cell--big-item
+									.hall-item
+										.news-item__photo(style="background: url(img/content/hall6.jpg) no-repeat center/cover")
+										.hall-item__content
+											.hall-item__title Уют без басейна
+											.hall-item__text Отличное сочетание цены и качества
+				.swiper-button-prev.hall-button-prev
+				.swiper-button-next.hall-button-next
+			.container
+				.row
+					.col-lg-6
+						.swiper-container.swiper-photo
+							.swiper-wrapper
+								.swiper-slide
+									.embed-responsive.embed-responsive-1by1
+										.embed-responsive-item.photo-item(style="background: url(img/content/slide1.jpg) no-repeat center/cover")
+								.swiper-slide
+									.embed-responsive.embed-responsive-1by1
+										.embed-responsive-item.photo-item(style="background: url(img/content/slide2.jpg) no-repeat center/cover")
+							.swiper-pagination.swiper-pagination--photo
+						
+					.col-lg-6.d-flex.flex-column.justify-content-center.position-relative.z-index
+						h3.mt-4
+							span.text-primary Банный комплекс<br>
+							| «Лагуна»
+						.subtitle.mb-4: big Банный комплекс «Лагуна», приглашает Вас окунуться в незабываемый водный мир!
+						p Банный комплекс «Лагуна», приглашает Вас окунуться в незабываемый водный мир! В теплые, циркуляционные бассейны с гидро-аэро массажем, гейзером, противотоком. Понежиться в большой джакузи и получить массу удовольствий. Прокатиться с водной горки в бассейн с «морской черепахой» в стиле «океанской стихии» и почувствовать себя повелителем подводного мира.
+						p Финская парная, сделанная из осины, приятный запах, целебные свойства, прекрасное настроение. Русская баня- парит здоровья дарит. Турецкая баня (хамам)с высокой влажностью - улучшает здоровье, привносит положительные эмоции и ощущение общей гармонии души и тела. Хамам приближает нас к пониманию «средиземноморского рая».
+	section.section-reviews
+		.container-fluid
+			h1.text-center Отзывы
+				a.subtitle.arrow-link.text-primary.ml-3(href="")
+					| все отзывы
+					+icon('arrow')
+			.swiper-container.swiper-reviews.pt-3.pb-5
+				.swiper-wrapper
+					.swiper-slide.text-center.d-flex.flex-column.align-items-center
+						.review-item__icon-wrapper
+							+pic('review-photo','content','review1')
+							img.w-100(src="", alt="")
+						.review-item__text.subtitle.b.text-uppercase.my-2 Александр
+						p Отдыхали здесь несколько раз большой компанией и все остались довольны. Чисто, просторно и не дорого. Вкусно кормят. Обслуживание - на высоте. А самое главное  - баня на дровах! Давно таких не встречал в Барнауле. Рекомендую всем!
+					.swiper-slide.text-center.d-flex.flex-column.align-items-center
+						.review-item__icon-wrapper
+							+pic('review-photo','content','review2')
+							img.w-100(src="", alt="")
+						.review-item__text.subtitle.b.text-uppercase.my-2 Ирина
+						p Отдыхали здесь несколько раз большой компанией и все остались довольны. Чисто, просторно и не дорого. Вкусно кормят. Обслуживание - на высоте. А самое главное  - баня на дровах! Давно таких не встречал в Барнауле. Рекомендую всем!
+					.swiper-slide.text-center.d-flex.flex-column.align-items-center
+						.review-item__icon-wrapper
+							+pic('review-photo','content','review3')
+							img.w-100(src="", alt="")
+						.review-item__text.subtitle.b.text-uppercase.my-2 Владимир
+						p Отдыхали здесь несколько раз большой компанией и все остались довольны. Чисто, просторно и не дорого. Вкусно кормят. Обслуживание - на высоте. А самое главное  - баня на дровах! Давно таких не встречал в Барнауле. Рекомендую всем!
+					.swiper-slide.text-center.d-flex.flex-column.align-items-center
+						.review-item__icon-wrapper
+							+pic('review-photo','content','review1')
+							img.w-100(src="", alt="")
+						.review-item__text.subtitle.b.text-uppercase.my-2 Александр
+						p Отдыхали здесь несколько раз большой компанией и все остались довольны. Чисто, просторно и не дорого. Вкусно кормят. Обслуживание - на высоте. А самое главное  - баня на дровах! Давно таких не встречал в Барнауле. Рекомендую всем!
+					.swiper-slide.text-center.d-flex.flex-column.align-items-center
+						.review-item__icon-wrapper
+							+pic('review-photo','content','review2')
+							img.w-100(src="", alt="")
+						.review-item__text.subtitle.b.text-uppercase.my-2 Ирина
+						p Отдыхали здесь несколько раз большой компанией и все остались довольны. Чисто, просторно и не дорого. Вкусно кормят. Обслуживание - на высоте. А самое главное  - баня на дровах! Давно таких не встречал в Барнауле. Рекомендую всем!
+					.swiper-slide.text-center.d-flex.flex-column.align-items-center
+						.review-item__icon-wrapper
+							+pic('review-photo','content','review3')
+							img.w-100(src="", alt="")
+						.review-item__text.subtitle.b.text-uppercase.my-2 Владимир
+						p Отдыхали здесь несколько раз большой компанией и все остались довольны. Чисто, просторно и не дорого. Вкусно кормят. Обслуживание - на высоте. А самое главное  - баня на дровах! Давно таких не встречал в Барнауле. Рекомендую всем!
+				.swiper-pagination.swiper-pagination--reviews
+

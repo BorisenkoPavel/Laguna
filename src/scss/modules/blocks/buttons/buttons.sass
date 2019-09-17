@@ -1,0 +1,68 @@
+.btn
+	font-size: 20px
+	font-weight: 800
+	border: none
+	text-transform: uppercase
+	cursor: pointer
+	display: inline-flex
+	align-items: center
+	height: 3.375rem
+	white-space: nowrap
+	svg
+		width: 30px
+		height: 30px
+		margin-right: 15px
+	&:hover
+		svg
+			animation: phone-bounce .8s ease
+.btn.btn-primary
+	&:hover
+		background-color: $secondary
+@keyframes phone-bounce
+	0%
+		transform: rotate(-0)
+	33%
+		transform: rotate(-10deg)
+	66%
+		transform: rotate(10deg)
+	100%
+		transform: rotate(-0)
+
+.swiper-button-prev, .swiper-button-next
+	width: 62px
+	height: 62px
+	background-color: $secondary
+	border-radius: 50%
+	background-image: url(../img/general/slider-arrow.svg)
+	margin-top: 0
+	top: 53%
+	transition: .3s ease
+	&:hover
+		background-color: $primary
+.swiper-button-next
+	right: auto
+	left: 100%
+.swiper-button-prev
+	transform: rotate(180deg)
+	right: 100%
+	left: auto
+.swiper-photo
+	.swiper-pagination
+		display: flex
+		margin-left: 15%
+		bottom: 5%!important
+.swiper-pagination-bullet.swiper-pagination-bullet-active
+	transform: scale(1.4)
+	background-color: $secondary
+.swiper-pagination-bullet
+	width: 16px
+	height: 16px
+	opacity: 1
+	margin: 0 10px!important
+	transition: transform .3s ease
+	&:hover
+		background-color: $secondary
+.section-reviews
+	.swiper-pagination
+		bottom: 0
+	

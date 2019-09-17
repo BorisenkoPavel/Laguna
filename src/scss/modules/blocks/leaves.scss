@@ -1,0 +1,147 @@
+// .dot{
+// 	width:73px;
+// 	height: 30px;
+//   position:absolute;
+//   background-image: url(../img/general/leave9.png);
+// 	background-size: contain;
+// 	background-repeat: no-repeat;
+// }
+
+// #container {
+// 	position: absolute;
+// 	left: 0;
+// 	top: 0;
+// 	right: calc(1170px + (100vw - 1140px) / 2);
+// 	height: 100%;
+// 	z-index: 999;
+// }
+
+
+// #DiacoDesignLink,#pens{
+//   color: #fff;
+// }
+.parallax-container {
+	width: 100%;
+}
+div#parallax-bg-1{
+	position: fixed;
+	width: 100%;
+	top: 1300px;
+	left: 0;
+	z-index: 1;
+}
+/* background middle layer*/
+div#parallax-bg-2{
+	position: fixed;
+	width: 100%;
+	top: 1300px;
+	left: 0 ;
+	z-index: 2;
+}
+/* background layer */
+div#parallax-bg-3{
+	position: fixed;
+	width: 100%;
+	top: 1300px;
+	left: 0;
+	z-index: 3;
+}
+/* foreground */
+div#parallax-bg-3 div{
+	background-repeat:no-repeat;
+	position:absolute;
+	display:block;
+	overflow:hidden;
+}
+div#bg-3-1{
+	background:url('../img/general/leave10.png');
+	width:209px;
+	height:220px;
+	top:-600px;
+	left: 20px;
+}
+div#bg-3-2{
+	background:url('../img/general/leave6.png');
+	width:116px;
+	height:115px;
+	top: -100px;
+	left: 20px;
+}
+div#bg-3-3{
+	background:url('../img/general/leave5.png');
+	width:220px;
+	height:370px;
+	top:-200px;
+	right:0;
+}
+
+/* middle layer clouds */
+div#parallax-bg-2 div{
+	position:absolute;
+	display:block;
+	overflow:hidden;
+}
+
+div#bg-2-1{
+	background:url('../img/general/leave4.png');
+	background-repeat:no-repeat;
+	top:-530px;
+	left:-10px;
+	width: 162px;
+	height: 314px;
+}
+div#bg-2-2{
+	background:url('../img/general/leave7.png');
+	background-repeat:no-repeat;
+	top:-230px;
+	left:-10px;
+	width: 300px;
+	height: 309px;
+}
+div#bg-2-3{
+	background:url('../img/general/leave2.png');
+	background-repeat:no-repeat;
+	top: 300px;
+	left:-10px;
+	width: 288px;
+	height: 368px;
+}
+div#bg-2-4{
+	background:url('../img/general/leave8.png');
+	background-repeat:no-repeat;
+	top: -420px;
+	right: 0px;
+	width: 122px;
+	height: 150px;
+}
+
+/*background layer clouds */
+div#parallax-bg-1 div{
+	background-repeat:no-repeat;
+	position:absolute;
+	display:block;
+	overflow:hidden;
+}
+div#bg-1-1{
+	background:url('../img/general/leave3.png');
+	width:137px;
+	height:186px;
+	top: 600px;
+	left: 0;
+}
+div#bg-1-2{
+}
+div#bg-1-3{
+	background:url('../img/general/leave9.png');
+	width:163px;
+	height:115px;
+	top:-350px;
+	right:0px;
+}
+div#bg-1-4{
+	background:url('../img/general/leave1.png');
+	width:186px;
+	height:327px;
+	top: 750px;
+	right:0px;
+}

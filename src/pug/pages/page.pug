@@ -1,0 +1,147 @@
+extends ../templates/main
+
+block variables
+	- var title = 'Внутрянняя страница'
+	- var pageClass = 'index-page'
+block content
+	section.section-catalog
+		.container
+			.row
+				.col-lg-6.mb-5
+					.swiper-container.swiper-photo
+						.swiper-wrapper
+							.swiper-slide
+								.embed-responsive.embed-responsive-1by1
+									.embed-responsive-item.photo-item(style="background: url(img/content/slide1.jpg) no-repeat center/cover")
+							.swiper-slide
+								.embed-responsive.embed-responsive-1by1
+									.embed-responsive-item.photo-item(style="background: url(img/content/slide2.jpg) no-repeat center/cover")
+						.swiper-pagination.swiper-pagination--photo
+				.col-lg-6.d-flex.flex-column.justify-content-start.position-relative.z-index
+					.advantage-item__num.position-static 01.
+					h3
+						| Русская баня 
+						span.text-primary Хуторок
+					.subtitle.mb-4: big В Русской бани «Хуторок»- можно приятно провести время и оздоровиться.
+					p Ароматные веники позволят вдоволь попариться. Обливная кадка с ледяной водой закалит и охладит Вас после банных процедур.
+					.subtitle.text-primary.b.mb-3 Вы можете заказать зал позвонив нам:
+					.row.mb-4
+						.col-auto.d-flex
+							+icon('contacts-phone', 'page-phone')
+						.col
+							.phone
+								.phone-title Единый номер
+								.phone-value.b (3852) 55-33-55
+						.col
+							.phone
+								.phone-title Банный комплекс
+								.phone-value.b (3852) 58-33-58
+						.col
+							.phone
+								.phone-title Гостиница
+								.phone-value.b (3852) 466-119
+					#tabs.text-white
+						ul.d-flex.no-decoration.justify-content-between
+							li.w-50.tab-title
+								a.subtitle.arrow-link.text-dark(href="#tabs-1")
+									| Цена и оплата
+									+icon('arrow')
+							li.w-50.tab-title
+								a.subtitle.arrow-link.text-dark(href="#tabs-2")
+									| Акции и скидки
+						#tabs-1.tab
+							.price.d-flex.flex-column
+								.b 850
+								span ₽/час
+							p Стандартная стоимость посещения (до 4-х человек). Свыше 4-х человек доплата 50 рублей/час с каждого дополнительного человека.
+						#tabs-2.tab
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aperiam officiis dolores, neque dolor asperiores dicta, fuga voluptatibus minima debitis quos nulla esse distinctio veritatis libero blanditiis qui omnis ducimus!
+			.row
+				.services-list.mb-5
+					.icon-block
+						.icon-block__icon
+							img(src="img/general/service-icon1.png", alt="")
+						.icon-block__desc Доп. услуги
+					.icon-block
+						.icon-block__icon
+							img(src="img/general/service-icon2.png", alt="")
+						.icon-block__desc Парковка
+					.icon-block
+						.icon-block__icon
+							img(src="img/general/service-icon3.png", alt="")
+						.icon-block__desc Бани и сауны
+					.icon-block
+						.icon-block__icon
+							img(src="img/general/service-icon4.png", alt="")
+						.icon-block__desc Бильярд
+					.icon-block
+						.icon-block__icon
+							img(src="img/general/service-icon5.png", alt="")
+						.icon-block__desc Сервис
+					.icon-block
+						.icon-block__icon
+							img(src="img/general/service-icon6.png", alt="")
+						.icon-block__desc Мульти-медиа
+				.advantage-list.mb-5
+					.advantage-item.d-flex.align-items-center.mb-3
+						.advantage-item__icon-wrapper.mr-4
+							+icon('adv', 'advantage-icon')
+						.advantage-item__content
+							.advantage-item__title.subtitle.b Бар
+							.advantage-item__desc В нашем баре представлен широкий ассортимент пива, напитков и закусок.
+					.advantage-item.d-flex.align-items-center.mb-3
+						.advantage-item__icon-wrapper.mr-4
+							+icon('adv', 'advantage-icon')
+						.advantage-item__content
+							.advantage-item__title.subtitle.b Теплые, чистые бассейны
+							.advantage-item__desc Теплые, чистые бассейны
+			.row.flex-row-reverse.mb-5
+				.col-lg-6
+					.swiper-container.swiper-photo
+						.swiper-wrapper
+							.swiper-slide
+								.embed-responsive.embed-responsive-1by1
+									.embed-responsive-item.photo-item(style="background: url(img/content/slide1.jpg) no-repeat center/cover")
+							.swiper-slide
+								.embed-responsive.embed-responsive-1by1
+									.embed-responsive-item.photo-item(style="background: url(img/content/slide2.jpg) no-repeat center/cover")
+						.swiper-pagination.swiper-pagination--photo
+				.col-lg-6.d-flex.flex-column.justify-content-start.position-relative.z-index
+					.advantage-item__num.position-static 02.
+					h3
+						| Русская баня 
+						span.text-primary Хуторок
+					.subtitle.mb-4: big В Русской бани «Хуторок»- можно приятно провести время и оздоровиться.
+					p Ароматные веники позволят вдоволь попариться. Обливная кадка с ледяной водой закалит и охладит Вас после банных процедур.
+					.subtitle.text-primary.b.mb-3 Вы можете заказать зал позвонив нам:
+					.row.mb-4
+						.col-auto.d-flex
+							+icon('contacts-phone', 'page-phone')
+						.col
+							.phone
+								.phone-title Единый номер
+								.phone-value.b (3852) 55-33-55
+						.col
+							.phone
+								.phone-title Банный комплекс
+								.phone-value.b (3852) 58-33-58
+						.col
+							.phone
+								.phone-title Гостиница
+								.phone-value.b (3852) 466-119
+					#tabs.text-white
+						ul.d-flex.no-decoration.justify-content-between
+							li.w-50.tab-title
+								a.subtitle.arrow-link.text-dark(href="#tabs-1")
+									| Цена и оплата
+									+icon('arrow')
+							li.w-50.tab-title
+								a.subtitle.arrow-link.text-dark(href="#tabs-2")
+									| Акции и скидки
+						#tabs-1.tab
+							.price.d-flex.flex-column
+								.b 850
+								span ₽/час
+							p Стандартная стоимость посещения (до 4-х человек). Свыше 4-х человек доплата 50 рублей/час с каждого дополнительного человека.
+						#tabs-2.tab
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aperiam officiis dolores, neque dolor asperiores dicta, fuga voluptatibus minima debitis quos nulla esse distinctio veritatis libero blanditiis qui omnis ducimus!

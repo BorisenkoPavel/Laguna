@@ -1,0 +1,68 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1400px
++media-breakpoint-down(xl)
+// ≥1200px
++media-breakpoint-down(lg)
+  .parallax-bg
+    display: none
+  section
+    padding: calc(2rem + 2.5vw) 0 
+  .menu
+    padding: calc(2rem + 2.5vw) 0
+// ≥992px
++media-breakpoint-down(md)
+  .advantage-list.grid
+    flex-direction: column
+    padding-left: 30px
+  .advantage-item__num
+    left: -30px
+    top: auto
+  .advantage-item
+    margin-bottom: 1.5rem!important
+  .swiper-photo .swiper-pagination
+    justify-content: center
+    margin-left: 0
+  .swiper-button-prev, .swiper-button-next
+    display: none
+  .swiper-container.swiper-photo
+    width: 100%
+    margin-left: 0
+// ≥768px
++media-breakpoint-down(sm)
+  .form-pic-wrapper
+    position: absolute
+    top: 50%
+    opacity: .3
+    transform: translatey(-50%)
+// ≥576px
++media-breakpoint-down(xs)
+  .btn
+    font-size: 14px
+    svg
+      width: 20px
+      height: 20px
+      margin-right: 5px
+  .hamburger
+    padding: 30px 10px
+    margin-left: -10px
+  .menu-item-list.col-sm-1
+    justify-content: space-around
+    padding: 0 3rem
+    margin-top: 1.5rem
+/*==========  mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
